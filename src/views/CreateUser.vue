@@ -1,48 +1,62 @@
 <template>
 <section class="dashboard-heading">
-        <div>
-            <h2 class="text-bold">
-                <img class="dashboard-heading__back" src="../assets/images/icons/Mask.png" alt="">
-                Create new users
-            </h2>
-            <p>Create a new user’s account by providing the following information.</p>
-        </div>
-    </section>
+    <div>
+        <h2 class="text-bold">
+            <img class="dashboard-heading__back" src="../assets/images/icons/Mask.png" alt="">
+            Create new users
+        </h2>
+        <p>Create a new user’s account by providing the following information.</p>
+    </div>
+</section>
 
-    
-    
-            
-   <form class="create-user-form">
-        <div>
-            <div class="block-input">
-                <label>Name</label>
-                <input id="block-input--border" type="text" placeholder="Emike Lucy">
-            </div>
-
-            <div class="block-input">
-                <label>Phone Number</label>
-                <input id="block-input--border" type="text" placeholder="+234812345678">
-            </div>
+<Success message="New user created!" v-if="success"/>
+     
+<form v-else class="create-user-form">
+    <div>
+        <div class="block-input">
+            <label>Name</label>
+            <input id="block-input--border" type="text" placeholder="Emike Lucy">
         </div>
 
-        <div class="create-user-form--margin-left">
-            <div class="block-input">
-                <label>Email Address</label>
-                <input id="block-input--border" type="text" placeholder="emikelucy@gmail.com">
-            </div>
-
-            <div class="block-input">
-                <label>Email Address</label>
-                <input id="block-input--border" type="text" placeholder="emikelucy@gmail.com">
-            </div>
-            
-            <div class="mt-8 flex justify-end">
-                <button class="text-medium btn btn--primary btn--normal">Create new user</button>
-            </div>
-                                        
+        <div class="block-input">
+            <label>Phone Number</label>
+            <input id="block-input--border" type="text" placeholder="+234812345678">
         </div>
-    </form>
+    </div>
+
+    <div class="create-user-form--margin-left">
+        <div class="block-input">
+            <label>Email Address</label>
+            <input id="block-input--border" type="text" placeholder="emikelucy@gmail.com">
+        </div>
+
+        <div class="block-input">
+            <label>Email Address</label>
+            <input id="block-input--border" type="text" placeholder="emikelucy@gmail.com">
+        </div>
+        
+        <div class="mt-8 flex justify-end">
+            <button @click="success = !success" class="text-medium btn btn--primary btn--normal">Create new user</button>
+        </div>
+                                    
+    </div>
+</form>
 </template>
+
+<script>
+import Success from '@/components/Success'
+export default {
+    components: {
+        Success
+    },
+    data() {
+        return {
+            success: false
+        }
+    },
+
+}
+</script>
 
 <style scoped>
 .admin-header {
