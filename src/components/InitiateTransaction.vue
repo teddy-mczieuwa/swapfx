@@ -11,27 +11,22 @@
             
             <div class="modalForm__body">
                 <div class="block-input block-input--large">
-                    <label>Payment Description</label>
-                    <input id="block-input--border" type="text" placeholder="Enter brief description">
+                    <label>Email Address</label>
+                    <input id="block-input--border" type="text" placeholder="emikelucy@gmail.com">
                 </div>
 
-                <div class="block-input block-input--large">
-                    <label>Account Details</label>
-                    <input id="block-input--border" type="text" placeholder="Enter receiving account">
-                </div>
-
-                <span class="modalForm__attach">
-                    <img class="fit-image mr-4 border" src="../assets/images/icons/attach.png" alt="">
-                   <p>Attach Supporting Documents</p>
+                <span class="modalForm__add">
+                    <img class="fit-image mr-4" src="../assets/images/icons/Subtract.png" alt="">
+                   <p>Add More</p>
                 </span>
 
                 <div class="modalForm__buttons">
                     <div class="modalForm__cancel">
-                        <button @click="close" class="text-medium btn btn--full btn--white">Cancel</button>
+                        <button @click="close" class="text-medium btn btn--full btn--white">Create new user</button>
                     </div>
 
                     <div class="modalForm__request">
-                        <button @click="showForm = !showForm" class="text-medium btn btn--primary btn--full">Send user form</button>
+                        <button @click="showForm = !showForm" class="text-medium btn btn--primary btn--full">Request user details</button>
                     </div>
                 </div>
 
@@ -123,18 +118,6 @@ export default {
         /* positioning */
         display: flex;
         justify-content: flex-end;
-        align-items: center;
-
-        /* box-model */
-        width: 50rem; 
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        
-    }
-
-    .modalForm__attach {
-        /* positioning */
-        display: flex;
         align-items: center;
 
         /* box-model */

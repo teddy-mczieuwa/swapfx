@@ -323,9 +323,6 @@
         width: 100%;
         height: 35rem;
         margin-top: 5rem;
-
-
-        border: 1px solid;
     }
 
     .dashboard-activity__heading {

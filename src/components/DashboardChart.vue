@@ -1,11 +1,6 @@
 <template>
     <div class="dashboard-chart">
-        <!-- PLACE CHART HERE -->
+      <img src="../assets/images/chart.png" alt="">
     </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>

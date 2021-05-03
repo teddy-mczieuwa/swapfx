@@ -2,7 +2,7 @@
 <section class="dashboard-heading">
     <div>
         <h2 class="text-bold">
-            <img class="dashboard-heading__back" src="../assets/images/icons/Mask.png" alt="">
+            <img @click="$router.go(-1)" class="dashboard-heading__back" src="../assets/images/icons/Mask.png" alt="">
             Create new users
         </h2>
         <p>Create a new user’s account by providing the following information.</p>

@@ -224,11 +224,15 @@ export default {
     .dashboard-chart {
         /* box-model */
         width: 100%;
-        height: 35rem;
+        height: 45rem;
         margin-top: 5rem;
 
+    }
 
-        border: 1px solid;
+    .dashboard-chart img {
+
+        height: 100%;
+        object-fit: cover;
     }
 
     .dashboard-activity__heading {
