@@ -141,7 +141,7 @@
 
 </template>
 
-<style scoped>
+<style>
 
 .admin-header {
     /* positioning */

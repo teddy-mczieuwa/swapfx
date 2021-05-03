@@ -10,18 +10,32 @@
             </div>
 
             <div class="dashboard-button">
-                <button class="text-medium btn btn--primary btn--full">Request user details</button>
+                <button @click="showForm = true" class="text-medium btn btn--primary btn--full">Request user details</button>
             </div>
         </div>
     </div>
+
+    <initiate-form v-if="showForm" @close="close"/>
 </template>
 
 <script>
+import InitiateForm from '@/components/InitiateForm'
 export default {
-    
+    components: {
+        InitiateForm
+    },
+
+    data() {
+        return {
+            showForm: false
+        }
+    },
+
+    methods: {
+        close() {
+            this.showForm = false
+        }
+    }
 }
 </script>
 
-<style scoped>
-
-</style>

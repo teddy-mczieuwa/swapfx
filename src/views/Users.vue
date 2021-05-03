@@ -38,7 +38,12 @@
                 <td  class="data-table__name">
                     <div class="data-table__name--center">
                         <input class="mr-4" type="checkbox">
+    
+                        <router-link class="data-table__name--link" to="/user">
+
                         <p class="pl-4 text-primary">Emike Lucy</p>
+
+                        </router-link>
                     </div>
                 </td>
 
@@ -46,7 +51,7 @@
                 <td>18 Jul 2018</td>
                 <td>5000</td>
                 <td class="flex items-center justify-between">
-                    <button class="btn-sm btn--large btn--primary">Initiate Transaction</button>
+                    <button @click="showForm = true" class="btn-sm btn--large btn--primary">Initiate Transaction</button>
                     <img class="fit-image ml-4" src="assets/images/icons/pen.png" alt="">
                     <img class="fit-image ml-4" src="assets/images/icons/slash.png" alt="">
                     <img class="fit-image ml-4" src="assets/images/icons/trash.png" alt="">
@@ -167,9 +172,30 @@
     </div>
             
     </section>
+
+    <InitiateForm v-if="showForm" @close="showForm = !showForm"></InitiateForm>
+
 </template>
 
-<style scoped>
+
+<script>
+import InitiateForm from '@/components/InitiateForm.vue'
+export default {
+
+    components: {
+        InitiateForm
+    },
+
+    data() {
+        return {
+            showForm:false
+        }
+    }
+}
+</script>
+
+<style>
+@media screen and (min-width: 640px) {
 .admin-header {
     /* positioning */
     display: flex;
@@ -254,6 +280,13 @@
     tr { border-bottom: 1px solid var(--light-gray);}
 
     .data-table__name {
+        /* typography */
+        text-decoration: underline;
+        text-underline-offset: .1rem;
+        text-decoration-color: var(--primary);
+    }
+
+    .data-table__name--link {
         /* typography */
         text-decoration: underline;
         text-underline-offset: .1rem;
@@ -346,5 +379,5 @@
         /* visual */
         background-color:var(--light-gray);
     }
-
+}
 </style>

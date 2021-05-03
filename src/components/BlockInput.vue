@@ -15,13 +15,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style >
+<style>
 @media screen and (min-width: 640px) {
     /* this is a component that groups a label with an input */
 
     .block-input {
         /* box-model */
         width: 41.4rem;
+        
+    }
+
+    .block-input--large {
+        /* box-model */
+        width: 45rem;
         
     }
 
@@ -55,6 +61,8 @@ export default {
         border-radius: 5px;
         border: none;
     }
+
+   
 
     #block-input--border {
         border: 1px solid var(--text-color);

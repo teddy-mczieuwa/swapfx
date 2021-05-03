@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
     .created-user-success {
         /* positioning */
         margin: 0 auto;
