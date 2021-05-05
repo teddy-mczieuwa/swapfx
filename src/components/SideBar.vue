@@ -6,7 +6,7 @@
                 <router-link to="/">
                     <div>
                         <img src="../assets/images/icons/dashboard.png" alt="Admin dashboard panel">
-                        <span class="highlight--primary">Dashboard</span>
+                        <span>Dashboard</span>
                     </div>
                 </router-link>
                 
@@ -84,6 +84,10 @@
 
 .sidebar ul li a {
     text-decoration: none;
+}
+
+.router-link-exact-active {
+    color: var(--primary);
 }
 
 .sidebar ul li img {

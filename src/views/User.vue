@@ -35,27 +35,33 @@
 
 <nav class="transactions-nav mt-10">
     <div class="transactions-nav__links">
-        <router-link :to="{name:'all-transactions'}" class="transactions-nav__links--active">All Transactions</router-link>
+        <router-link :to="{name:'all-transactions'}" exact>All Transactions</router-link>
         <router-link to="/pending">Pending</router-link>
         <router-link to="/in-progress">In Progress</router-link>
         <router-link to="/completed">Completed</router-link>
     </div>
 </nav>
     
+
 <router-view></router-view>
 
 
-     
 
 </template>
 
 <script>
 export default {
 
+    data() {
+        return {
+            active: true
+        }
+    }
+
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (min-width: 640px) {
     
     .transactions-data {
@@ -83,7 +89,16 @@ export default {
        
     }
 
-    .transactions-nav__links--active {
+    /* .transactions-nav__links--active {
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+    } */
+    /* .router-link-active {
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+    } */
+
+    .router-link-exact-active {
         color: var(--primary);
         border-bottom: 2px solid var(--primary);
     }

@@ -10,7 +10,7 @@ import AllTransactions from '../views/AllTransactions'
 import PendingTransactions from '../views/PendingTransactions'
 import InProgress from '../views/InProgress'
 import Completed from '../views/Completed'
-import RequestUserDetails from '../views/RequestUserDetails'
+// import RequestUserDetails from '../views/RequestUserDetails'
 
 
 const routes = [

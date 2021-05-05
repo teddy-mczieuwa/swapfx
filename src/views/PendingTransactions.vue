@@ -37,8 +37,8 @@
 
 .data-table {
         /* box-model */
-        width: 100%;
-        margin-top: -2rem;
+        /* width: 100%;
+        margin-top: -2rem; */
     }
 
     .data-table table {

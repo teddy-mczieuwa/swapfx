@@ -25,7 +25,7 @@
                 <td>0000000001</td>
                 <td>50,000,000</td>
                 
-                <td>Pending</td>
+                <td>In Progress</td>
                 <td class="flex items-center justify-between">
                     <button class="btn-sm btn--large btn--primary">Notify</button>
                     <button class="btn btn--white ml-4 px-4">Hi</button>
@@ -42,8 +42,8 @@
 @media screen and (min-width: 640px) {
     .data-table {
             /* box-model */
-            width: 100%;
-            margin-top: -2rem;
+            /* width: 100%;
+            margin-top: -2rem; */
         }
 
     .data-table table {

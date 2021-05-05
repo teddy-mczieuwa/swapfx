@@ -194,7 +194,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (min-width: 640px) {
 .admin-header {
     /* positioning */

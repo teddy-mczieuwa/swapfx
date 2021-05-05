@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .admin-header {
     /* positioning */
     display: flex;

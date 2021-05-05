@@ -3,7 +3,7 @@
         <form class="modalForm">
             <div  class="modalForm__header">
                 <div class="modalForm__heading">
-                    <h1>Initiate Transaction</h1>
+                    <h1>Request User Details</h1>
                     <img @click="close" class="fit-image" src="../assets/images/icons/close.png" alt="">
                 </div>
                 <p>Enter user’s email address and a form would be sent to them.</p>
