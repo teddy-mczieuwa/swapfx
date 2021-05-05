@@ -15,6 +15,11 @@ import Completed from '../views/Completed'
 
 const routes = [
   {
+    path:'/auth',
+    name: 'authentication',
+    component: Authentication
+  },
+  {
     path: '/',
     name: 'dashboard',
     component: Dashboard

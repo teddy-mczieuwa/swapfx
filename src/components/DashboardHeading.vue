@@ -3,6 +3,7 @@
         <div>
             <h2>Hello <span class="text-bold">Admin,</span></h2>
             <p>Here’s an overview of what’s been going on.</p>
+            
         </div>
         <div class="dashboard-heading__buttons">
             <div class="dashboard-button">
@@ -10,31 +11,41 @@
             </div>
 
             <div class="dashboard-button">
-                <button @click="showForm = true" class="text-medium btn btn--primary btn--full">Request user details</button>
+                <button @click="$emit('requestUserDetails')" class="text-medium btn btn--primary btn--full">Request user details</button>
             </div>
         </div>
     </div>
 
-    <initiate-form v-if="showForm" @close="close"/>
+    <!-- <request-user-details v-if="showForm" @close="close"/> -->
+    <!-- <notification-overlay @showNotification="showNotification" v-if="showNotification"></notification-overlay> -->
 </template>
 
 <script>
-import InitiateForm from '@/components/InitiateForm'
+import RequestUserDetails from '@/components/RequestUserDetails'
+import NotificationOverlay from '@/components/NotificationOverlay'
 export default {
     components: {
-        InitiateForm
+        RequestUserDetails,
+        NotificationOverlay
     },
 
     data() {
         return {
-            showForm: false
+            showForm: false,
+            showNotification: false
         }
     },
 
     methods: {
         close() {
             this.showForm = false
+        },
+
+        sendRequest() {
+            console.log('hello')
+            this.showNotification = true
         }
+        
     }
 }
 </script>

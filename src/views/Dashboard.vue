@@ -1,5 +1,5 @@
 <template>
-<DashboardHeading/>
+<DashboardHeading @requestUserDetails="showForm=true"/>
 <section class="dashboard-content">
     <div class="dashboard-info">
         <div class="dashboard-data">
@@ -10,16 +10,36 @@
     </div>
     <DashboardRates/>
 </section>
+
+<request-user-details 
+v-if="showForm" 
+@showNotification="showNotification"
+ @close="close"/>
+
+<notification-overlay 
+message="User Details Requested"
+v-if="show"
+  @close="closeNotification">
+  </notification-overlay>
+
+<!-- <initiate-transaction v-if="transactionForm" @close="closeTransactionForm">
+
+</initiate-transaction> -->
 </template>
 
+
+
 <script>
+import NotificationOverlay from '@/components/NotificationOverlay'
 import SideBar from '@/components/SideBar'
 import Header from '@/components/Header'
 import DashboardHeading from '@/components/DashboardHeading'
 import DashboardDataCard from '@/components/DashboardDataCard'
 import DashboardChart from '@/components/DashboardChart'
+import RequestUserDetails from '@/components/RequestUserDetails'
 import DashboardRates from '@/components/DashboardRates'
 import DashboardActivities from '@/components/DashboardActivities'
+import InitiateTransaction from '@/components/InitiateTransaction'
 
 export default {
   components: {
@@ -29,7 +49,35 @@ export default {
     DashboardDataCard,
     DashboardChart,
     DashboardRates,
-    DashboardActivities
+    DashboardActivities,
+    NotificationOverlay,
+    InitiateTransaction,
+    RequestUserDetails
+  },
+
+  data() {
+      return {
+          show: false,
+          showForm: false,
+          transactionForm: false
+      }
+  },
+  methods: {
+      close() {
+          this.showForm = false
+      },
+      showNotification() {
+          this.showForm = false
+          this.show = true
+      },
+
+
+      closeNotification() {
+          this.show = false
+      },
+      closeTransactionForm () {
+          this.transactionForm = false
+      }
   }
 }
 </script>

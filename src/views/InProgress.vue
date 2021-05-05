@@ -28,8 +28,12 @@
                 <td>In Progress</td>
                 <td class="flex items-center justify-between">
                     <button class="btn-sm btn--large btn--primary">Notify</button>
-                    <button class="btn btn--white ml-4 px-4">Hi</button>
-                    <button class="btn btn--white ml-4 px-4">Hi</button>
+                    <button class="btn btn--white ml-4 px-4">
+                        <img src="../assets/images/icons/download2.png" alt="">
+                    </button>
+                    <button class="btn btn--white ml-4 px-4">
+                        <img src="../assets/images/icons/corner-up-right.png" alt="">
+                    </button>
                 </td>
             </tr>
         </table>

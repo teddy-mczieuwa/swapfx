@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="modalForm__request">
-                        <button @click="showForm = !showForm" class="text-medium btn btn--primary btn--full">Request user details</button>
+                        <button @click.prevent="$emit('showNotification')" class="text-medium btn btn--primary btn--full">Request user details</button>
                     </div>
                 </div>
 

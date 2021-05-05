@@ -3,6 +3,7 @@
         <form class="modalForm">
             <div  class="modalForm__header">
                 <div class="modalForm__heading">
+                    
                     <h1>Request User Details</h1>
                     <img @click="close" class="fit-image" src="../assets/images/icons/close.png" alt="">
                 </div>
@@ -22,11 +23,11 @@
 
                 <div class="modalForm__buttons">
                     <div class="modalForm__cancel">
-                        <button @click="close" class="text-medium btn btn--full btn--white">Create new user</button>
+                        <button  @click="$router.push('/create-user')" class="text-medium btn btn--full btn--white">Create new user</button>
                     </div>
 
                     <div class="modalForm__request">
-                        <button @click="showForm = !showForm" class="text-medium btn btn--primary btn--full">Request user details</button>
+                        <button @click.prevent="$emit('showNotification')" class="text-medium btn btn--primary btn--full">Request user details</button>
                     </div>
                 </div>
 
@@ -40,13 +41,18 @@
 
 <script>
 import BlockInput from '@/components/BlockInput'
+import NotificationOverlay from '@/components/NotificationOverlay'
+
+
 export default {
     components: {
+        NotificationOverlay,
         BlockInput
     },
     methods: {
         close() {
             this.$emit('close')
+
         }
     }
 }

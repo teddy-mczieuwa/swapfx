@@ -173,22 +173,46 @@
             
     </section>
 
-    <InitiateForm v-if="showForm" @close="showForm = !showForm"></InitiateForm>
-
+    <InitiateForm v-if="showForm" @showNotification="showNotification" @close="showForm = !showForm"></InitiateForm>
+    <notification-overlay 
+    message="Transaction Form Sent"
+    v-if="showNotificationModal"
+    @close="closeNotification">
+    </notification-overlay>
 </template>
 
 
 <script>
 import InitiateForm from '@/components/InitiateForm.vue'
+import NotificationOverlay from '@/components/NotificationOverlay'
 export default {
 
     components: {
-        InitiateForm
+        InitiateForm,
+        NotificationOverlay
     },
 
     data() {
         return {
-            showForm:false
+            showForm:false,
+            showNotificationModal: false
+        }
+    },
+
+    methods: {
+        close () {
+            this.showForm = false
+        },
+
+        closeNotification () {
+            this.showNotificationModal = false
+        },
+
+        
+
+        showNotification() {
+            this.showNotificationModal = true
+            this.showForm = false
         }
     }
 }

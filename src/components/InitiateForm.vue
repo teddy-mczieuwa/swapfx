@@ -21,7 +21,9 @@
                 </div>
 
                 <span class="modalForm__attach">
-                    <img class="fit-image mr-4 border" src="../assets/images/icons/attach.png" alt="">
+                    <div class="mr-4" style="padding: .4rem; border-radius: 5px; border: 1px solid var(--primary); display: flex; justify-content: center; align-items: center;">
+                        <img class="fit-image border" src="../assets/images/icons/attach.png" alt="">
+                    </div>
                    <p>Attach Supporting Documents</p>
                 </span>
 
@@ -31,7 +33,7 @@
                     </div>
 
                     <div class="modalForm__request">
-                        <button @click="showForm = !showForm" class="text-medium btn btn--primary btn--full">Send user form</button>
+                        <button @click.prevent="$emit('showNotification')" class="text-medium btn btn--primary btn--full">Send user form</button>
                     </div>
                 </div>
 
